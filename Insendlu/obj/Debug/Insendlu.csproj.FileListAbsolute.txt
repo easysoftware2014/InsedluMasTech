@@ -1,0 +1,128 @@
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Insendlu.dll.config
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Insendlu.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Insendlu.pdb
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\EntityFramework.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Microsoft.Web.Infrastructure.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\System.Web.Providers.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\EntityFramework.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.xml
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\obj\Debug\Insendlu.dll
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\obj\Debug\Insendlu.pdb
+c:\users\sipho\documents\visual studio 2013\Projects\Insendlu\Insendlu\obj\Debug\Insendlu.csprojResolveAssemblyReference.cache
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Insendlu.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Insendlu.pdb
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\EntityFramework.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\System.Web.Providers.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\System.Net.Http.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\EntityFramework.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\bin\System.Net.Http.xml
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\obj\Debug\Insendlu.csprojResolveAssemblyReference.cache
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\obj\Debug\Insendlu.dll
+C:\Users\Arthur TT\Videos\Insendlu\Insendlu\obj\Debug\Insendlu.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.dll.config
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\AjaxControlToolkit.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\AspNet.ScriptManager.jQuery.UI.Combined.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\EntityFramework.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\EntityFramework.SqlServer.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.Encryptor.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.Entities.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendu.Services.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\itextsharp.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.Core.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.Owin.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.SystemWeb.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.Security.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Newtonsoft.Json.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Owin.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\SignalRChat.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Extensions.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Formatting.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Primitives.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Web.Http.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Web.Http.WebHost.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Web.Providers.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Org.Mentalis.Security.Cryptography.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Mono.Math.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.Encryptor.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendlu.Entities.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Insendu.Services.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\SignalRChat.pdb
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.Core.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\EntityFramework.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\EntityFramework.SqlServer.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\itextsharp.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.FriendlyUrls.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.Membership.OpenAuth.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.Core.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.Owin.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.AspNet.SignalR.SystemWeb.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Microsoft.Owin.Security.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Newtonsoft.Json.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Extensions.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Formatting.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Net.Http.Primitives.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Web.Http.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\System.Web.Http.WebHost.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Org.Mentalis.Security.Cryptography.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\bin\Mono.Math.xml
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\obj\Debug\Insendlu.csproj.App.config
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\obj\Debug\Insendlu.csprojResolveAssemblyReference.cache
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\obj\Debug\Insendlu.dll
+C:\Users\ayanda.sawulisi.MAXXOR\Downloads\Insendlu\Insendlu\Insendlu\obj\Debug\Insendlu.pdb

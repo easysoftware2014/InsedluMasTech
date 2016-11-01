@@ -1,0 +1,582 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="InsendluModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="mission_statement" Type="nvarchar(max)" />
+          <Property Name="service_id" Type="int" />
+          <Property Name="proj_id" Type="int" />
+        </EntityType>
+        <EntityType Name="CompanyServices">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="100" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ExecutiveSummary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proj_id" Type="int" Nullable="false" />
+          <Property Name="content" Type="nvarchar(max)" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userId" Type="int" />
+          <Property Name="firstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="lastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="level" Type="int" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="project_id" Type="int" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="description" Type="nvarchar(max)" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="status" Type="int" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="upload_id" Type="int" />
+          <Property Name="proj_cat_id" Type="int" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="exec_summary_id" Type="int" />
+          <Property Name="company_id" Type="int" />
+          <Property Name="policy_id" Type="int" />
+          <Property Name="methodology_id" Type="int" />
+          <Property Name="team" Type="nvarchar" MaxLength="50" />
+          <Property Name="proj_reference" Type="int" />
+          <Property Name="cost_plan_id" Type="int" />
+          <Property Name="conclusion" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ProjectCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="int" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="ProjectCostPlan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="proj_id" Type="int" />
+          <Property Name="details" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ProjectMethodology">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="content" Type="nvarchar(max)" />
+          <Property Name="proj_id" Type="int" />
+        </EntityType>
+        <EntityType Name="ProjectPolicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="policy_number" Type="nvarchar" MaxLength="20" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="proj_id" Type="int" />
+          <Property Name="content" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="Upload">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar(max)" />
+          <Property Name="file_location" Type="nvarchar(max)" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+          <Property Name="data" Type="varbinary(max)" />
+          <Property Name="content_type" Type="nvarchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="surname" Type="nvarchar" MaxLength="50" />
+          <Property Name="email" Type="nvarchar" MaxLength="100" />
+          <Property Name="password" Type="nvarchar" MaxLength="150" />
+          <Property Name="recovery_question" Type="bigint" />
+          <Property Name="recovery_answer" Type="nvarchar(max)" />
+          <Property Name="created_at" Type="datetime" Nullable="false" />
+          <Property Name="modified_at" Type="datetime" Nullable="false" />
+          <Property Name="temporary_password" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="int" />
+          <Property Name="contact_number" Type="nvarchar" MaxLength="20" />
+          <Property Name="project_id" Type="bigint" />
+          <Property Name="user_type_id" Type="int" />
+        </EntityType>
+        <EntityType Name="User_Project">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="proj_id" Type="int" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="created_at" Type="datetime" />
+          <Property Name="modified_at" Type="datetime" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="50" />
+          <Property Name="status" Type="int" />
+        </EntityType>
+        <EntityContainer Name="InsendluModelStoreContainer">
+          <EntitySet Name="Company" EntityType="Self.Company" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CompanyServices" EntityType="Self.CompanyServices" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ExecutiveSummary" EntityType="Self.ExecutiveSummary" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Message" EntityType="Self.Message" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Notification" EntityType="Self.Notification" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project" EntityType="Self.Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectCategory" EntityType="Self.ProjectCategory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectCostPlan" EntityType="Self.ProjectCostPlan" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectMethodology" EntityType="Self.ProjectMethodology" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ProjectPolicy" EntityType="Self.ProjectPolicy" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Upload" EntityType="Self.Upload" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User_Project" EntityType="Self.User_Project" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserType" EntityType="Self.UserType" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="InsendluModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Company">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="mission_statement" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="service_id" Type="Int32" />
+          <Property Name="proj_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="CompanyService">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ExecutiveSummary">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proj_id" Type="Int32" Nullable="false" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Notification">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="project_id" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Project">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="upload_id" Type="Int32" />
+          <Property Name="proj_cat_id" Type="Int32" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="exec_summary_id" Type="Int32" />
+          <Property Name="company_id" Type="Int32" />
+          <Property Name="policy_id" Type="Int32" />
+          <Property Name="methodology_id" Type="Int32" />
+          <Property Name="team" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="proj_reference" Type="Int32" />
+          <Property Name="cost_plan_id" Type="Int32" />
+          <Property Name="conclusion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProjectCategory">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="ProjectCostPlan">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="proj_id" Type="Int32" />
+          <Property Name="details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ProjectPolicy">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="policy_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="proj_id" Type="Int32" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Upload">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="file_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="data" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="content_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="recovery_question" Type="Int64" />
+          <Property Name="recovery_answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="temporary_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+          <Property Name="contact_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="project_id" Type="Int64" />
+          <Property Name="user_type_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="UserType">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="Int32" />
+        </EntityType>
+        <EntityContainer Name="InsendluEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Companies" EntityType="Self.Company" />
+          <EntitySet Name="CompanyServices" EntityType="Self.CompanyService" />
+          <EntitySet Name="ExecutiveSummaries" EntityType="Self.ExecutiveSummary" />
+          <EntitySet Name="Notifications" EntityType="Self.Notification" />
+          <EntitySet Name="Projects" EntityType="Self.Project" />
+          <EntitySet Name="ProjectCategories" EntityType="Self.ProjectCategory" />
+          <EntitySet Name="ProjectCostPlans" EntityType="Self.ProjectCostPlan" />
+          <EntitySet Name="ProjectPolicies" EntityType="Self.ProjectPolicy" />
+          <EntitySet Name="Uploads" EntityType="Self.Upload" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+          <EntitySet Name="ProjectMethodologies" EntityType="InsendluModel.ProjectMethodology" />
+          <EntitySet Name="Messages" EntityType="InsendluModel.Message" />
+          <EntitySet Name="User_Project" EntityType="InsendluModel.User_Project" />
+        </EntityContainer>
+        <EntityType Name="ProjectMethodology">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+          <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="proj_id" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Message">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userId" Type="Int32" />
+          <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="level" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User_Project">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="proj_id" Type="Int32" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="created_at" Type="DateTime" Precision="3" />
+          <Property Name="modified_at" Type="DateTime" Precision="3" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="InsendluModelStoreContainer" CdmEntityContainer="InsendluEntities">
+          <EntitySetMapping Name="Companies">
+            <EntityTypeMapping TypeName="InsendluModel.Company">
+              <MappingFragment StoreEntitySet="Company">
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="mission_statement" ColumnName="mission_statement" />
+                <ScalarProperty Name="service_id" ColumnName="service_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CompanyServices">
+            <EntityTypeMapping TypeName="InsendluModel.CompanyService">
+              <MappingFragment StoreEntitySet="CompanyServices">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ExecutiveSummaries">
+            <EntityTypeMapping TypeName="InsendluModel.ExecutiveSummary">
+              <MappingFragment StoreEntitySet="ExecutiveSummary">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Notifications">
+            <EntityTypeMapping TypeName="InsendluModel.Notification">
+              <MappingFragment StoreEntitySet="Notification">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="project_id" ColumnName="project_id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Projects">
+            <EntityTypeMapping TypeName="InsendluModel.Project">
+              <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="conclusion" ColumnName="conclusion" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="description" ColumnName="description" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="upload_id" ColumnName="upload_id" />
+                <ScalarProperty Name="proj_cat_id" ColumnName="proj_cat_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="exec_summary_id" ColumnName="exec_summary_id" />
+                <ScalarProperty Name="company_id" ColumnName="company_id" />
+                <ScalarProperty Name="policy_id" ColumnName="policy_id" />
+                <ScalarProperty Name="methodology_id" ColumnName="methodology_id" />
+                <ScalarProperty Name="team" ColumnName="team" />
+                <ScalarProperty Name="proj_reference" ColumnName="proj_reference" />
+                <ScalarProperty Name="cost_plan_id" ColumnName="cost_plan_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectCategories">
+            <EntityTypeMapping TypeName="InsendluModel.ProjectCategory">
+              <MappingFragment StoreEntitySet="ProjectCategory">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectCostPlans">
+            <EntityTypeMapping TypeName="InsendluModel.ProjectCostPlan">
+              <MappingFragment StoreEntitySet="ProjectCostPlan">
+                <ScalarProperty Name="details" ColumnName="details" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectPolicies">
+            <EntityTypeMapping TypeName="InsendluModel.ProjectPolicy">
+              <MappingFragment StoreEntitySet="ProjectPolicy">
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="policy_number" ColumnName="policy_number" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Uploads">
+            <EntityTypeMapping TypeName="InsendluModel.Upload">
+              <MappingFragment StoreEntitySet="Upload">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="file_location" ColumnName="file_location" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="data" ColumnName="data" />
+                <ScalarProperty Name="content_type" ColumnName="content_type" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="InsendluModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="user_type_id" ColumnName="user_type_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="surname" ColumnName="surname" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="recovery_question" ColumnName="recovery_question" />
+                <ScalarProperty Name="recovery_answer" ColumnName="recovery_answer" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="temporary_password" ColumnName="temporary_password" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="contact_number" ColumnName="contact_number" />
+                <ScalarProperty Name="project_id" ColumnName="project_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserTypes">
+            <EntityTypeMapping TypeName="InsendluModel.UserType">
+              <MappingFragment StoreEntitySet="UserType">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="status" ColumnName="status" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ProjectMethodologies">
+            <EntityTypeMapping TypeName="InsendluModel.ProjectMethodology">
+              <MappingFragment StoreEntitySet="ProjectMethodology">
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+                <ScalarProperty Name="content" ColumnName="content" />
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Messages">
+            <EntityTypeMapping TypeName="InsendluModel.Message">
+              <MappingFragment StoreEntitySet="Message">
+                <ScalarProperty Name="level" ColumnName="level" />
+                <ScalarProperty Name="lastName" ColumnName="lastName" />
+                <ScalarProperty Name="firstName" ColumnName="firstName" />
+                <ScalarProperty Name="userId" ColumnName="userId" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Project">
+            <EntityTypeMapping TypeName="InsendluModel.User_Project">
+              <MappingFragment StoreEntitySet="User_Project">
+                <ScalarProperty Name="modified_at" ColumnName="modified_at" />
+                <ScalarProperty Name="created_at" ColumnName="created_at" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="proj_id" ColumnName="proj_id" />
+                <ScalarProperty Name="id" ColumnName="id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

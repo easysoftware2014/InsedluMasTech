@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="InsendluModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Company">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="mission_statement" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="service_id" Type="Int32" />
+    <Property Name="proj_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="CompanyService">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ExecutiveSummary">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="proj_id" Type="Int32" Nullable="false" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Notification">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="project_id" Type="Int32" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Project">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="upload_id" Type="Int32" />
+    <Property Name="proj_cat_id" Type="Int32" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="exec_summary_id" Type="Int32" />
+    <Property Name="company_id" Type="Int32" />
+    <Property Name="policy_id" Type="Int32" />
+    <Property Name="methodology_id" Type="Int32" />
+    <Property Name="team" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="proj_reference" Type="Int32" />
+    <Property Name="cost_plan_id" Type="Int32" />
+    <Property Name="conclusion" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProjectCategory">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="ProjectCostPlan">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="proj_id" Type="Int32" />
+    <Property Name="details" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="ProjectPolicy">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="policy_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="proj_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Upload">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="file_location" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="data" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="content_type" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="surname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="password" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="recovery_question" Type="Int64" />
+    <Property Name="recovery_answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="temporary_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="contact_number" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Name="project_id" Type="Int64" />
+  </EntityType>
+  <EntityType Name="UserType">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="status" Type="Int32" />
+    <Property Name="type" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="InsendluEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Companies" EntityType="Self.Company" />
+    <EntitySet Name="CompanyServices" EntityType="Self.CompanyService" />
+    <EntitySet Name="ExecutiveSummaries" EntityType="Self.ExecutiveSummary" />
+    <EntitySet Name="Notifications" EntityType="Self.Notification" />
+    <EntitySet Name="Projects" EntityType="Self.Project" />
+    <EntitySet Name="ProjectCategories" EntityType="Self.ProjectCategory" />
+    <EntitySet Name="ProjectCostPlans" EntityType="Self.ProjectCostPlan" />
+    <EntitySet Name="ProjectPolicies" EntityType="Self.ProjectPolicy" />
+    <EntitySet Name="Uploads" EntityType="Self.Upload" />
+    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="UserTypes" EntityType="Self.UserType" />
+    <EntitySet Name="ProjectMethodologies" EntityType="InsendluModel.ProjectMethodology" />
+    <EntitySet Name="Messages" EntityType="InsendluModel.Message" />
+  </EntityContainer>
+  <EntityType Name="ProjectMethodology">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="created_at" Type="DateTime" Precision="3" />
+    <Property Name="modified_at" Type="DateTime" Precision="3" />
+    <Property Name="content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="proj_id" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="userId" Type="Int32" />
+    <Property Name="firstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="level" Type="Int32" />
+  </EntityType>
+</Schema>
