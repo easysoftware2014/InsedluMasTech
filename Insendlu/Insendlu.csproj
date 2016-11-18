@@ -309,6 +309,7 @@
     <Content Include="assets\js\tree.min.js" />
     <Content Include="assets\js\wizard.min.js" />
     <Content Include="assets\swf\flashExport.swf" />
+    <Content Include="AssignUserToProject.aspx" />
     <Content Include="Calender.aspx" />
     <Content Include="Chat.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -684,6 +685,13 @@
     </Compile>
     <Compile Include="AllProjects.aspx.designer.cs">
       <DependentUpon>AllProjects.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AssignUserToProject.aspx.cs">
+      <DependentUpon>AssignUserToProject.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AssignUserToProject.aspx.designer.cs">
+      <DependentUpon>AssignUserToProject.aspx</DependentUpon>
     </Compile>
     <Compile Include="Calender.aspx.cs">
       <DependentUpon>Calender.aspx</DependentUpon>
